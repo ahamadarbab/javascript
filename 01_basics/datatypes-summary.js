@@ -41,3 +41,28 @@ myFunction();
 console.log(typeof bigNumber);
 
 
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive) & heap (Non primitive)
+
+let myCityName = "Agra"
+
+let anotherCityName = myCityName
+anotherCityName = "Noida"
+
+console.log(myCityName);
+console.log(anotherCityName);
+
+
+let userOne = {
+    email: "user@gmail.com",
+    city: "Agra",
+}
+
+let userTwo = userOne
+userTwo.email = "user123@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
