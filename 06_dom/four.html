@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in JavaScript</title>
+</head>
+<body style="background-color: black; color: white">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // Adding value
+
+    function addLanguage(langName) {
+        const listItem = document.createElement('li')
+        listItem.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(listItem)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+    addLanguage("java")
+
+    function addOptiLanguage(langName) {
+        const listItem = document.createElement("li")
+        listItem.appendChild(document.createTextNode(`${langName}`))
+        document.querySelector(".language").appendChild(listItem)
+    }
+    addOptiLanguage("golang")
+    addOptiLanguage("c++")
+
+
+    // Editing value
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "swift"
+    const newLi = document.createElement("li")
+    newLi.textContent = "swift"
+    secondLang.replaceWith(newLi)
+
+    // edit
+    const lastLang = document.querySelector("li:nth-child(6)")
+    lastLang.outerHTML = "<li>ruby</>"
+
+    // removing value
+    const lastSecond = document.querySelector("li:nth-child(5)")
+    lastSecond.remove()
+    
+</script>
+</html>
